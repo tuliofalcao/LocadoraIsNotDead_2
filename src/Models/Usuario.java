@@ -63,4 +63,12 @@ public class Usuario extends Pessoa {
         return this.usuarios;
     }
     
+    public void removeUsuariodeUsuarios(Usuario usuario){
+        for (Usuario u : usuario.usuarios){
+            if (u.getNome().equals(usuario.getNome()) && (u.getCpf().equals(usuario.getCpf()))){
+                usuarios.remove(u);
+            }
+        }
+    }
+    
 }

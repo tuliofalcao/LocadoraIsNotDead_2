@@ -87,6 +87,11 @@ public class CadastroUsuario extends javax.swing.JFrame {
         getContentPane().add(btnCadastraUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(158, 270, 140, -1));
 
         btnRemoverUsuario.setText("Remover Existente");
+        btnRemoverUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRemoverUsuarioActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnRemoverUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, -1, -1));
         getContentPane().add(passSenhaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, 340, -1));
 
@@ -104,6 +109,10 @@ public class CadastroUsuario extends javax.swing.JFrame {
     private void btnCadastraUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastraUsuarioActionPerformed
         controller.cadastraUsuario();
     }//GEN-LAST:event_btnCadastraUsuarioActionPerformed
+
+    private void btnRemoverUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoverUsuarioActionPerformed
+        controller.removerUsuario();
+    }//GEN-LAST:event_btnRemoverUsuarioActionPerformed
 
     /**
      * @param args the command line arguments

@@ -33,4 +33,26 @@ public class CadastroUsuarioController {
         telaPrincipal.setVisible(true);
         view.dispose();
     }
+    
+    public void removerUsuario(){
+        int id = Integer.parseInt(view.getTxtIdUsuario().getText());
+        String nome = view.getTxtNomeUsuario().getText();
+        String cpf = view.getTxtCpfUsuario().getText();
+        String login = view.getTxtLoginUsuario().getText();
+        String senha = view.getPassSenhaUsuario().getText();
+        
+         Usuario usuario = new Usuario(id, nome, cpf, login, senha);
+             
+        for (Usuario u : usuario.getUsuarios()){
+            if (u.getNome().equals(nome) && u.getCpf().equals(cpf)){
+                usuario.removeUsuariodeUsuarios(usuario);
+            }
+        }
+        
+        JOptionPane.showMessageDialog(null, "Usuário Removido com Sucesso!");
+        
+        Principal telaPrincipal = new Principal();
+        telaPrincipal.setVisible(true);
+        view.dispose();
+    }
 }
