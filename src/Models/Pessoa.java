@@ -3,6 +3,7 @@ package Models;
 /**
  *
  * @author tulio
+ *  * TRIO: Túlio Falcão / Marcos Vinícius / Pedro Henrique de Oliveira Santos
  */
 public abstract class Pessoa {
     protected int id;

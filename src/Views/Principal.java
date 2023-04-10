@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package Views;
 
 import Controllers.PrincipalController;
@@ -9,6 +5,7 @@ import Controllers.PrincipalController;
 /**
  *
  * @author tulio
+ *  * TRIO: Túlio Falcão / Marcos Vinícius / Pedro Henrique de Oliveira Santos
  */
 public class Principal extends javax.swing.JFrame {
 
@@ -65,9 +62,19 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().add(btnCadastroUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
 
         btnCadastroCliente.setText("Cadastrar Cliente");
+        btnCadastroCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastroClienteActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnCadastroCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, -1, -1));
 
         btnCadastroFilme.setText("Cadastrar Filme");
+        btnCadastroFilme.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastroFilmeActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnCadastroFilme, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 80, -1, -1));
 
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -77,9 +84,19 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
 
         btnProcuraFilme.setText("Procurar Filme");
+        btnProcuraFilme.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProcuraFilmeActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnProcuraFilme, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 140, -1));
 
         btnAlugar.setText("Alugar");
+        btnAlugar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAlugarActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnAlugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 130, -1));
 
         btnReceberFilmes.setText("Receber Filmes");
@@ -122,6 +139,22 @@ public class Principal extends javax.swing.JFrame {
     private void btnCadastroUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastroUsuarioActionPerformed
         controller.entrarCadastroUsuario();
     }//GEN-LAST:event_btnCadastroUsuarioActionPerformed
+
+    private void btnCadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastroClienteActionPerformed
+        controller.entrarCadastroCliente();
+    }//GEN-LAST:event_btnCadastroClienteActionPerformed
+
+    private void btnCadastroFilmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastroFilmeActionPerformed
+        controller.entrarCadastroCliente();
+    }//GEN-LAST:event_btnCadastroFilmeActionPerformed
+
+    private void btnProcuraFilmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcuraFilmeActionPerformed
+        controller.entrarProcuraFilme();
+    }//GEN-LAST:event_btnProcuraFilmeActionPerformed
+
+    private void btnAlugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlugarActionPerformed
+        controller.entrarAlugarFilme();
+    }//GEN-LAST:event_btnAlugarActionPerformed
 
     /**
      * @param args the command line arguments

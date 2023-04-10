@@ -5,6 +5,7 @@ import java.util.ArrayList;
 /**
  *
  * @author tulio
+ *  * TRIO: Túlio Falcão / Marcos Vinícius / Pedro Henrique de Oliveira Santos
  */
 public class Cliente extends Pessoa implements ClienteActions{
     

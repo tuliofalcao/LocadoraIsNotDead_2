@@ -7,6 +7,7 @@ import Views.Principal;
 /**
  *
  * @author tulio
+ *  * TRIO: Túlio Falcão / Marcos Vinícius / Pedro Henrique de Oliveira Santos
  */
 public class LoginController {
 

@@ -9,6 +9,7 @@ import javax.swing.JOptionPane;
 /**
  *
  * @author tulio
+ *  * TRIO: Túlio Falcão / Marcos Vinícius / Pedro Henrique de Oliveira Santos
  */
 public class CadastroUsuarioController {
 
@@ -19,20 +20,27 @@ public class CadastroUsuarioController {
     }
     
     public void cadastraUsuario(){
-        int id = Integer.parseInt(view.getTxtIdUsuario().getText());
-        String nome = view.getTxtNomeUsuario().getText();
-        String cpf = view.getTxtCpfUsuario().getText();
-        String login = view.getTxtLoginUsuario().getText();
-        String senha = view.getPassSenhaUsuario().getText();
         
-        Usuario usuario = new Usuario(id, nome, cpf, login, senha);
-        usuario.adiciona(usuario);
+        try {
+            int id = Integer.parseInt(view.getTxtIdUsuario().getText());
+            String nome = view.getTxtNomeUsuario().getText();
+            String cpf = view.getTxtCpfUsuario().getText();
+            String login = view.getTxtLoginUsuario().getText();
+            String senha = view.getPassSenhaUsuario().getText();
+
+            Usuario usuario = new Usuario(id, nome, cpf, login, senha);
+            usuario.adiciona(usuario);
+
+            JOptionPane.showMessageDialog(null, "Usuário Cadastrado com Sucesso!");
+
+            Principal telaPrincipal = new Principal();
+            telaPrincipal.setVisible(true);
+            view.dispose();
+        }
         
-        JOptionPane.showMessageDialog(null, "Usuário Cadastrado com Sucesso!");
-        
-        Principal telaPrincipal = new Principal();
-        telaPrincipal.setVisible(true);
-        view.dispose();
+        catch (NumberFormatException e){
+            JOptionPane.showMessageDialog(null,"O campo ID deve conter apenas números!" );
+        }
     }
     
     public void removerUsuario(){
