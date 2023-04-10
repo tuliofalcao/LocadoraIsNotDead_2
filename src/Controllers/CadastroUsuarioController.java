@@ -3,6 +3,7 @@ package Controllers;
 import Models.Usuario;
 import Views.CadastroUsuario;
 import Views.Principal;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -42,10 +43,13 @@ public class CadastroUsuarioController {
         String senha = view.getPassSenhaUsuario().getText();
         
          Usuario usuario = new Usuario(id, nome, cpf, login, senha);
-             
-        for (Usuario u : usuario.getUsuarios()){
-            if (u.getNome().equals(nome) && u.getCpf().equals(cpf)){
-                usuario.removeUsuariodeUsuarios(usuario);
+            
+         ArrayList<Usuario> listaUsuarios = usuario.getUsuarios();
+        for (int i = 0; i < usuario.getUsuarios().size(); i++){
+            if (listaUsuarios.get(i).getNome().equals(nome) && listaUsuarios.get(i).getCpf().equals(cpf)){
+                listaUsuarios.remove(listaUsuarios.get(i));
+            }else{
+                JOptionPane.showMessageDialog(null, "Usuário não encontrado!");
             }
         }
         
